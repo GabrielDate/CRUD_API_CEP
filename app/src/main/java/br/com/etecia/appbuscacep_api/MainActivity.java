@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.concurrent.ExecutionException;
@@ -14,7 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnBuscarCep;
     EditText txtCep;
-    TextView lblCEP, lblLogradouro, lblComplemento, lblBairro, lblCidade, lblEstado;
+    EditText lblCEP, txtEndereco, txtNumero, txtComplemento, txtBairro, txtCidade;
+
+    Spinner spnEstado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtCep = findViewById(R.id.txtCep);
-        lblCEP = findViewById(R.id.lblCEP);
-        lblLogradouro = findViewById(R.id.lblLogradouro);
-        lblComplemento = findViewById(R.id.lblComplemento);
-        lblBairro = findViewById(R.id.lblBairro);
-        lblCidade = findViewById(R.id.lblCidade);
-        lblEstado = findViewById(R.id.lblEstado);
+        txtEndereco = findViewById(R.id.txtEndereco);
+        txtNumero = findViewById(R.id.txtNumero);
+        txtComplemento = findViewById(R.id.txtComplemento);
+        txtBairro = findViewById(R.id.txtBairro);
+        txtCidade = findViewById(R.id.txtCidade);
+        spnEstado = findViewById(R.id.spnEstado);
         btnBuscarCep = findViewById(R.id.btnBuscaCep);
 
         btnBuscarCep.setOnClickListener(new View.OnClickListener() {
@@ -40,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
                     //preencher o cep no lblResposta do layout
                     CEP retorno = new HttpService(txtCep.getText().toString().trim()).execute().get();
                     lblCEP.setText(retorno.getCep().toString());
-                    lblLogradouro.setText(retorno.getLogradouro().toString());
-                    lblComplemento.setText(retorno.getComplemento().toString());
-                    lblBairro.setText(retorno.getBairro().toString());
-                    lblCidade.setText(retorno.getLocalidade().toString());
-                    lblEstado.setText(retorno.getUf().toString());
+                    txtEndereco.setText(retorno.getEndereco().toString());
+                    txtNumero.setText(retorno.getComplemento().toString());
+                    txtComplemento.setText(retorno.getComplemento().toString());
+                    txtBairro.setText(retorno.getBairro().toString());
+                    txtCidade.setText(retorno.getUf().toString());
 
 
                 } catch (ExecutionException e) {

@@ -35,54 +35,67 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/lblCEP"
+    <EditText
+        android:id="@+id/txtEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Endereço"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/lblLogradouro"
+
+    <EditText
+        android:id="@+id/txtNumero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Numero"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="25dp"
+        android:inputType="number"
+        />
 
-    <TextView
-        android:id="@+id/lblComplemento"
+    <EditText
+        android:id="@+id/txtComplemento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Complemento"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/lblBairro"
+    <EditText
+        android:id="@+id/txtBairro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Bairro"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/lblCidade"
+    <EditText
+        android:id="@+id/txtCidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Cidade"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/lblEstado"
+    <Spinner
+        android:id="@+id/spnEstado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:padding="5dp"
         android:textColor="#000000"
-        android:textSize="20sp" />
-
+        android:textSize="25dp" />
 
 
 </LinearLayout>

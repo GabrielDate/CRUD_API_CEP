@@ -1,9 +1,12 @@
 package br.com.etecia.appbuscacep_api;
 
 
+import java.lang.reflect.GenericArrayType;
+
 public class CEP {
     private String cep;
-    private String logradouro;
+
+    private String endereco;
     private String complemento;
     private String bairro;
     private String localidade;
@@ -12,9 +15,9 @@ public class CEP {
     public CEP() {
     }
 
-    public CEP(String cep, String logradouro, String complemento, String bairro, String localidade, String uf) {
+    public CEP(String cep, String endereco, String complemento, String bairro, String localidade, String uf) {
         this.cep = cep;
-        this.logradouro = logradouro;
+        this.endereco = endereco;
         this.complemento = complemento;
         this.bairro = bairro;
         this.localidade = localidade;
@@ -29,12 +32,12 @@ public class CEP {
         this.cep = cep;
     }
 
-    public String getLogradouro() {
-        return logradouro;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getComplemento() {
@@ -72,7 +75,7 @@ public class CEP {
     @Override
     public String toString() {
         return "CEP: " + getCep()
-                + "\nLogradouro: " + getLogradouro()
+                + "\nEndereço: " + getEndereco()
                 + "\nComplemento: " + getComplemento()
                 + "\nBairro: " + getBairro()
                 + "\nCidade:" + getLocalidade()
