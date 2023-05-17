@@ -9,11 +9,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnBuscarCep;
+
     EditText txtCep;
     EditText lblCEP, txtEndereco, txtNumero, txtComplemento, txtBairro, txtCidade;
 
@@ -32,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         txtCidade = findViewById(R.id.txtCidade);
         spnEstado = findViewById(R.id.spnEstado);
         btnBuscarCep = findViewById(R.id.btnBuscaCep);
+
+        FloatingActionButton casdastrar = findViewById(R.id.Cadastrar);
+        casdastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Endereço cadastrado", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         btnBuscarCep.setOnClickListener(new View.OnClickListener() {
             @Override
