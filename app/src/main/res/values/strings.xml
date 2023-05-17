@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">AppBuscaCEP-API</string>
-
+    <string name="Cadastrar">VOCÊ FOI CADASTRADO!</string>
 </resources>
